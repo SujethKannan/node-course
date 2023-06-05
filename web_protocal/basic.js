@@ -7,11 +7,12 @@ const data ={
     designation:'senior developer'
 }
 const server=http.createServer((request,response)=>{
-    response.writeHead(200,{"Content_Type":'JASON'});
+     //using 'application/jason' for an object, use 'plain/text' for a string
+    response.writeHead(400,{"Content-Type":'application/jason'});      
     response.end(JSON.stringify(data));
 
 })
 server.listen(PORT,HOSTNAME,()=>{
-    console.log(`server is running >http://${HOSTNAME}:${PORT}`)
+    console.log(`server is running >http://${HOSTNAME}:${PORT}`);
  
 })
