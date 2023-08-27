@@ -22,7 +22,7 @@ const server=http.createServer((request,response)=>{
 
    }else {
     response.writeHead(405,{"Content-Type":'application/json'});      
-    response.end(JSON.stringify({message:'Only GET Method Is Allowed'}));
+    response.end(JSON.stringify({message:'Only GET and POST Method Is Allowed'}));
 
    }
 })
